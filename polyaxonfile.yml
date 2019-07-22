@@ -1,0 +1,26 @@
+---
+version: 1
+
+kind: experiment 
+build:
+  image: tensorflow/tensorflow:1.12.0-rc1-gpu-py3
+  build_steps: 
+  - apt-get install -y libsm6 libxext6 libxrender-dev
+  - pip3 install -r requirements.txt
+
+environment:
+  resources:
+    cpu:
+      requests: 6
+      limits: 8
+    memory:
+      requests: 16000
+      limits: 16000
+    gpu:
+      requests: 1
+      limits: 1
+
+run:
+  cmd: echo $POLYAXON_RUN_OUTPUTS_PATH && python3 train.py --out $POLYAXON_RUN_OUTPUTS_PATH
+  
+

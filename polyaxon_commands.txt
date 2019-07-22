@@ -1,0 +1,3 @@
+polyaxon upload
+polyaxon run -f polyaxonfile.yml -u
+polyaxon check -f polyaxonfile.yml
