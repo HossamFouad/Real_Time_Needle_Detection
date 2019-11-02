@@ -54,7 +54,7 @@ pathlib==1.0.1
 pbr==5.1.3
 pexpect==4.7.0
 pickleshare==0.7.5
-Pillow==6.0.0
+Pillow==6.2.0
 Pillow-PIL==0.1.dev0
 polyaxon-cli==0.4.4
 polyaxon-client==0.4.4
